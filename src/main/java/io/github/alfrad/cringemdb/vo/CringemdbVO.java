@@ -1,7 +1,7 @@
-package br.com.kek.cringemdb.vo;
+package io.github.alfrad.cringemdb.vo;
 
-import br.com.kek.cringemdb.utils.Constants;
-import br.com.kek.cringemdb.utils.CringemdbBooleanFormatter;
+import io.github.alfrad.cringemdb.utils.Constants;
+import io.github.alfrad.cringemdb.utils.CringemdbBooleanFormatter;
 import lombok.Data;
 import lombok.ToString;
 import us.codecraft.webmagic.model.annotation.ExtractBy;

@@ -1,4 +1,4 @@
-package br.com.kek.cringemdb.entities;
+package io.github.alfrad.cringemdb.entities;
 
 import lombok.Data;
 

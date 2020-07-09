@@ -1,6 +1,6 @@
-package br.com.kek.cringemdb;
+package io.github.alfrad.cringemdb;
 
-import br.com.kek.cringemdb.services.SearchService;
+import io.github.alfrad.cringemdb.services.SearchService;
 import lombok.Data;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;

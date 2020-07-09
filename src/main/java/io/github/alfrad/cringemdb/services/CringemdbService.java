@@ -1,10 +1,10 @@
-package br.com.kek.cringemdb.services;
+package io.github.alfrad.cringemdb.services;
 
 import java.util.List;
 
-import br.com.kek.cringemdb.Cringemdb;
-import br.com.kek.cringemdb.entities.Movie;
-import br.com.kek.cringemdb.vo.CringemdbVO;
+import io.github.alfrad.cringemdb.Cringemdb;
+import io.github.alfrad.cringemdb.entities.Movie;
+import io.github.alfrad.cringemdb.vo.CringemdbVO;
 import lombok.SneakyThrows;
 import retrofit2.Response;
 import us.codecraft.webmagic.Site;

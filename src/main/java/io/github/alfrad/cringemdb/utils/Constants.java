@@ -1,4 +1,4 @@
-package br.com.kek.cringemdb.utils;
+package io.github.alfrad.cringemdb.utils;
 
 public class Constants {
 
