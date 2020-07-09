@@ -1,5 +1,6 @@
 package io.github.alfrad.cringemdb;
 
+import io.github.alfrad.cringemdb.services.CringemdbService;
 import io.github.alfrad.cringemdb.services.SearchService;
 import lombok.Data;
 import okhttp3.OkHttpClient;
@@ -15,6 +16,17 @@ public class Cringemdb {
 
 	private OkHttpClient okHttpClient;
 	private Retrofit retrofit;
+
+	private static Cringemdb instance;
+
+	private Cringemdb() {
+	}
+
+	public static synchronized Cringemdb getInstance() {
+		if (instance == null)
+			instance = new Cringemdb();
+		return instance;
+	}
 
 	protected Retrofit.Builder retrofitBuilder() {
 		return new Retrofit.Builder().baseUrl(API_URL).addConverterFactory(GsonConverterFactory.create())
@@ -37,6 +49,10 @@ public class Cringemdb {
 
 	public SearchService searchService() {
 		return getRetrofit().create(SearchService.class);
+	}
+
+	public CringemdbService getCringemdbService() {
+		return CringemdbService.getInstance();
 	}
 
 }
