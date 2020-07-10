@@ -24,8 +24,8 @@ public class CringemdbService {
 	}
 
 	@SneakyThrows
-	public CringemdbVO getResumeFromCingemdb(String nameAndYearOfMovie) {
-		SearchService searchService = Cringemdb.getInstance().searchService();
+	public CringemdbVO getResumeFromCringemdb(String nameAndYearOfMovie) {
+		CringemdbSearchService searchService = Cringemdb.getInstance().searchService();
 		Response<List<Movie>> execute = searchService.search(nameAndYearOfMovie).execute();
 		Movie movie = extractResultFromResponse(execute);
 		return getCringemdbVOFromMovie(movie);

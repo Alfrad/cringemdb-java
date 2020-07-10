@@ -1,7 +1,7 @@
 package io.github.alfrad.cringemdb;
 
 import io.github.alfrad.cringemdb.services.CringemdbService;
-import io.github.alfrad.cringemdb.services.SearchService;
+import io.github.alfrad.cringemdb.services.CringemdbSearchService;
 import lombok.Data;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
@@ -47,8 +47,8 @@ public class Cringemdb {
 		return retrofit;
 	}
 
-	public SearchService searchService() {
-		return getRetrofit().create(SearchService.class);
+	public CringemdbSearchService searchService() {
+		return getRetrofit().create(CringemdbSearchService.class);
 	}
 
 	public CringemdbService getCringemdbService() {
