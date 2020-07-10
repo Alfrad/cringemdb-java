@@ -1,6 +1,6 @@
-﻿<h1 align="center">
+<h1 align="center">
     <img height="50"  alt="Unofficial Java API" src="https://cringemdb.com/img/logo.svg" />
-    <h2 align="center" >cringemdb-java - Unofficial Java API</h2>
+    <h2 align="center" >Cringemdb-Java - Unofficial API crawler based.</h2>
 </h1>
 
 **Pull requests are welcome!**
@@ -26,14 +26,15 @@ or your Maven project:
 </dependency>
 ```
 
-Use like any other retrofit2 based service. For example:
+You can use the application like:
 
 ```java
 try {
     String nameAndYearOfMovie = ??? // Pattern: Name of Movie (year)
     CringemdbVO resumeFromCringemdb = 
-        cringemdb.getCringemdbService()
-        .getResumeFromCringemdb(nameAndYearOfMovie);
+        Cringemdb.getInstance()
+            .getCringemdbService()
+            .getResumeFromCringemdb(nameAndYearOfMovie);
 } catch (CringemdbNotFoundException e) {
 	//means the movie not found in cringemdb.com
 } catch (IOException e) {
